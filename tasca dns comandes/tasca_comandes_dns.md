@@ -128,3 +128,14 @@ nslookup -type=SOA escolapia.cat
 **Explicació:** el registre SOA (*Start of Authority*) conté la informació administrativa de l'autoritat de la zona DNS.
 
 ---
+## 7. Consulta mDNS entre dues màquines virtuals a Linux
+ 
+**Comanda a Linux:**
+ 
+```bash
+getent hosts quico-Virtualbox.local
+```
+ 
+![Captura 11](/tasca%20dns%20comandes/img/11.png)
+
+**Explicació:** a diferència de Windows, a Linux les consultes de resolució de noms per a la xarxa local (mDNS) s'executen mitjançant la comanda `getent` seguida de l'argument `hosts` i el nom de domini local acabat en `.local`.
