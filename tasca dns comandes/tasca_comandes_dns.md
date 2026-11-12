@@ -8,7 +8,7 @@
 dig www.xtec.cat
 ```
 
-![Captura 1]()
+![Captura 1](/tasca%20dns%20comandes/img/1.png)
 
 
 **Comanda alternativa (`nslookup`):**
@@ -17,7 +17,7 @@ dig www.xtec.cat
 nslookup www.xtec.cat
 ```
 
-![Captura 2]()
+![Captura 2](/tasca%20dns%20comandes/img/2.png)
 
 
 **Comprovació:** la resposta és no-autoritativa perquè el servidor DNS local que s'utilitza no conté la zona corresponent al domini sol·licitat i ha de fer ell la consulta a un altre servidor.
@@ -35,7 +35,7 @@ nslookup www.xtec.cat
 dig @8.8.8.8 upf.edu NS
 ```
 
-![Captura 3]()
+![Captura 3](/tasca%20dns%20comandes/img/3.png)
 
 
 **Comanda alternativa amb `nslookup`:**
@@ -44,7 +44,7 @@ dig @8.8.8.8 upf.edu NS
 nslookup -type=NS upf.edu 8.8.8.8
 ```
 
-![Captura 4]()
+![Captura 4](/tasca%20dns%20comandes/img/4.png)
 
 
 **Explicació:** mitjançant el paràmetre `@8.8.8.8` s'indica a `dig` quin servidor DNS específic ha de processar la petició per obtenir els servidors de noms (registres NS).
@@ -59,7 +59,7 @@ nslookup -type=NS upf.edu 8.8.8.8
 dig @ns1.cesca.cat www.upf.edu
 ```
 
-![Captura 5]()
+![Captura 5](/tasca%20dns%20comandes/img/5.png)
 
 **Comprovació:** quan la consulta es fa directament al servidor que conté la informació del domini, la resposta és autoritativa. En la sortida de `dig`, es confirma observant que a l'apartat de *flags* de la capçalera sí que apareix l'indicador `aa` (*authoritative answer*).
 
@@ -73,7 +73,7 @@ dig @ns1.cesca.cat www.upf.edu
 dig upf.edu MX
 ```
 
-![Captura 6]()
+![Captura 6](/tasca%20dns%20comandes/img/6.png)
 
 **Comanda alternativa amb `nslookup`:**
 
@@ -81,7 +81,7 @@ dig upf.edu MX
 nslookup -type=MX upf.edu
 ```
 
-![Captura 7]()
+![Captura 7](/tasca%20dns%20comandes/img/7.png)
 
 **Explicació:** els registres MX (*Mail Exchange*) especifiquen quins són els servidors de correu associats al domini.
 
@@ -95,7 +95,7 @@ nslookup -type=MX upf.edu
 dig @ns1.cesca.cat escolapia.cat
 ```
 
-![Captura 8]()
+![Captura 8](/tasca%20dns%20comandes/img/8.png)
 
 **Comprovació:** com que el servidor autoritatiu de la UPF només respon de les seves pròpies zones i no té la recursió activada per a dominis externs, la petició no es resoldrà i `dig` mostrarà l'avís:
 
@@ -113,7 +113,7 @@ WARNING: recursion requested but not available
 dig escolapia.cat SOA
 ```
 
-![Captura 9]()
+![Captura 9](/tasca%20dns%20comandes/img/9.png)
 
 
 **Comanda alternativa amb `nslookup`:**
@@ -122,7 +122,7 @@ dig escolapia.cat SOA
 nslookup -type=SOA escolapia.cat
 ```
 
-![Captura 10]()
+![Captura 10](/tasca%20dns%20comandes/img/10.png)
 
 
 **Explicació:** el registre SOA (*Start of Authority*) conté la informació administrativa de l'autoritat de la zona DNS.
